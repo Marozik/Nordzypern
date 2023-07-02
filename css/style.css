@@ -382,6 +382,7 @@ body {
 .title-big {
   font-weight: 900;
   line-height: 1.0816326531;
+  font-size: 96px;
 }
 
 .title {
@@ -610,6 +611,7 @@ body {
 .intro__container {
   position: relative;
   z-index: 5;
+  max-width: 1190px;
   color: #fff;
 }
 
@@ -1209,6 +1211,11 @@ body {
 
 .newsletter__subtitle {
   text-align: center;
+}
+
+.newsletter__form {
+  position: relative;
+  z-index: 2;
 }
 
 .form-newsletter__line {
@@ -2279,10 +2286,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (min-width: 76.25em) {
-  .title-big {
-    font-size: 6.125rem;
-  }
-
   .title {
     font-size: 1.875rem;
   }
@@ -2468,11 +2471,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 20em) {
+@media (max-width: 64em) {
   .title-big {
-    font-size: 2rem;
+    font-size: 62px;
   }
+}
 
+@media (max-width: 20em) {
   .title {
     font-size: 1.5rem;
   }
@@ -2658,7 +2663,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (max-width: 87.5em) {
+  .intro__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 @media (max-width: 47.99875em) {
+  .title-big {
+    font-size: 36px;
+  }
+
   .title-small {
     font-size: 22px;
   }
@@ -2674,6 +2690,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .intro {
     min-height: 90vh;
+  }
+
+  .intro__container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .intro__background::before {
@@ -2801,18 +2822,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (min-width: 20em) and (max-width: 76.25em) {
-@supports (font-size: clamp( 2rem , 0.5333333333rem  +  7.3333333333vw , 6.125rem )) {
-    .title-big {
-      font-size: clamp( 2rem , 0.5333333333rem  +  7.3333333333vw , 6.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 2rem , 0.5333333333rem  +  7.3333333333vw , 6.125rem )) {
-    .title-big {
-      font-size: calc(2rem + 4.125 * (100vw - 20rem) / 56.25);
-    }
-}
-
 @supports (font-size: clamp( 1.5rem , 1.3666666667rem  +  0.6666666667vw , 1.875rem )) {
     .title {
       font-size: clamp( 1.5rem , 1.3666666667rem  +  0.6666666667vw , 1.875rem );
