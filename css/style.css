@@ -27,28 +27,12 @@
   display: block;
 }
 
-._icon-beauty:before {
-  content: "\e904";
-}
-
-._icon-tourism:before {
-  content: "\e907";
-}
-
-._icon-unit:before {
-  content: "\e908";
-}
-
-._icon-cash-coin:before {
-  content: "\e909";
-}
-
-._icon-golf:before {
-  content: "\e900";
-}
-
-._icon-happy:before {
+._icon-phone:before {
   content: "\e902";
+}
+
+._icon-email:before {
+  content: "\e903";
 }
 
 ._icon-quotes:before {
@@ -59,48 +43,16 @@
   content: "\e90a";
 }
 
-._icon-call:before {
-  content: "\e905";
+._icon-unit:before {
+  content: "\e908";
 }
 
-._icon-mail:before {
-  content: "\e903";
-}
-
-._icon-percent:before {
-  content: "\e90b";
-}
-
-._icon-beach:before {
-  content: "\e906";
-}
-
-._icon-library:before {
-  content: "\e921";
-}
-
-._icon-coin-dollar:before {
-  content: "\e93b";
+._icon-cash-coin:before {
+  content: "\e909";
 }
 
 ._icon-location:before {
   content: "\e948";
-}
-
-._icon-glass:before {
-  content: "\e9a0";
-}
-
-._icon-food:before {
-  content: "\e9a3";
-}
-
-._icon-airplane:before {
-  content: "\e9af";
-}
-
-._icon-man:before {
-  content: "\e9dc";
 }
 
 * {
@@ -382,7 +334,7 @@ body {
 .title-big {
   font-weight: 900;
   line-height: 1.0816326531;
-  font-size: 96px;
+  font-size: 98px;
 }
 
 .title {
@@ -594,7 +546,7 @@ body {
 
 .intro {
   position: relative;
-  min-height: 104.3vh;
+  min-height: 100vh;
 }
 
 .intro::before {
@@ -611,7 +563,7 @@ body {
 .intro__container {
   position: relative;
   z-index: 5;
-  max-width: 1190px;
+  max-width: 1220px;
   color: #fff;
 }
 
@@ -635,7 +587,6 @@ body {
 
 .intro__text {
   max-width: 876px;
-  font-weight: 600;
   opacity: 0;
   -webkit-transform: translate(0, 50px);
       -ms-transform: translate(0, 50px);
@@ -649,6 +600,10 @@ body {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+.intro__text p {
+  font-weight: 600;
 }
 
 .intro__button {
@@ -1404,7 +1359,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 15px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
@@ -2403,11 +2358,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .intro__text {
-    font-size: 1.25rem;
+    margin-bottom: 4.75rem;
   }
 
-  .intro__text {
-    margin-bottom: 4.75rem;
+  .intro__text p {
+    font-size: 1.25rem;
   }
 
   .video__title {
@@ -2595,11 +2550,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .intro__text {
-    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
   }
 
-  .intro__text {
-    margin-bottom: 1.25rem;
+  .intro__text p {
+    font-size: 1.125rem;
   }
 
   .video__title {
@@ -2665,6 +2620,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 87.5em) {
   .intro__container {
+    max-width: 1190px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -3170,18 +3126,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
-    .intro__text {
-      font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
-    .intro__text {
-      font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 56.25);
-    }
-}
-
 @supports (margin-bottom: clamp( 1.25rem , 0.0055555556rem  +  6.2222222222vw , 4.75rem )) {
     .intro__text {
       margin-bottom: clamp( 1.25rem , 0.0055555556rem  +  6.2222222222vw , 4.75rem );
@@ -3191,6 +3135,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (margin-bottom: clamp( 1.25rem , 0.0055555556rem  +  6.2222222222vw , 4.75rem )) {
     .intro__text {
       margin-bottom: calc(1.25rem + 3.5 * (100vw - 20rem) / 56.25);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
+    .intro__text p {
+      font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
+    .intro__text p {
+      font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 56.25);
     }
 }
 
