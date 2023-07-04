@@ -574,8 +574,10 @@ body {
   -webkit-transform: translate(0, 50px);
       -ms-transform: translate(0, 50px);
           transform: translate(0, 50px);
-  -webkit-transition: all 0.8s ease 0.5s;
-  transition: all 0.8s ease 0.5s;
+  -webkit-transition: opacity 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
 }
 
 .loaded .intro__title {
@@ -591,8 +593,10 @@ body {
   -webkit-transform: translate(0, 50px);
       -ms-transform: translate(0, 50px);
           transform: translate(0, 50px);
-  -webkit-transition: all 0.8s ease 0.7s;
-  transition: all 0.8s ease 0.7s;
+  -webkit-transition: opacity 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
 }
 
 .loaded .intro__text {
